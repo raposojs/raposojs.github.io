@@ -67,7 +67,7 @@ jQuery(document).ready(function() {
                     $("h4").css("display", "none")
                     $(".checker").css("display", "none")
                     $(".hint").css("display", "none")
-                    $(".tries").text("Good Job! " + winningNumber + " is the winning number!");
+                    $(".tries").text("Good Job! After " + (5 - counter) + " tries, you found the winning number: " + winningNumber);
                 } else {
                     $(".tries").css("color", "white")
                     if (counter === 0) {
