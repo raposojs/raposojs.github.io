@@ -36,6 +36,12 @@ jQuery(document).ready(function() {
     //DO THIS WHEN CHECK IS CLICKED
     $(".checker").on("click", function() {
 
+        if(counter === 4){
+            var singularOrPlural = "try"
+        } else {
+            var singularOrPlural = "tries"
+        }
+
         // UPDATE PLAYER PICK
         userSub = Number($(".field").val());
 
@@ -67,7 +73,7 @@ jQuery(document).ready(function() {
                     $("h4").css("display", "none")
                     $(".checker").css("display", "none")
                     $(".hint").css("display", "none")
-                    $(".tries").text("Good Job! After " + (5 - counter) + " tries, you found the winning number: " + winningNumber);
+                    $(".tries").text("Good Job! After " + (5 - counter) + " " + singularOrPlural + ", you found the winning number: " + winningNumber);
                 } else {
                     $(".tries").css("color", "white")
                     if (counter === 0) {
